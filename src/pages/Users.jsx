@@ -1,29 +1,29 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Lumiflex } from "uvcanvas"; // Import Lumiflex
 import "./Users.css";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
-  const [filteredUsers, setFilteredUsers] = useState([]); // Filtered Users
+  const [filteredUsers, setFilteredUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
   const [editedData, setEditedData] = useState({
     first_name: "",
     last_name: "",
     email: "",
   });
-  const [searchQuery, setSearchQuery] = useState(""); // Search Query
+  const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     axios.get(`https://reqres.in/api/users?page=${page}`).then((res) => {
       setUsers(res.data.data);
-      setFilteredUsers(res.data.data); // Initialize filteredUsers with all users
+      setFilteredUsers(res.data.data);
       setTotalPages(res.data.total_pages);
     });
   }, [page]);
 
-  // Handle search input
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     setSearchQuery(query);
@@ -49,7 +49,7 @@ const Users = () => {
   const handleDelete = (id) => {
     axios.delete(`https://reqres.in/api/users/${id}`).then(() => {
       setUsers(users.filter((user) => user.id !== id));
-      setFilteredUsers(filteredUsers.filter((user) => user.id !== id)); // Update filtered users
+      setFilteredUsers(filteredUsers.filter((user) => user.id !== id));
     });
   };
 
@@ -71,9 +71,8 @@ const Users = () => {
 
   return (
     <div className="container">
+      <Lumiflex /> {/* Background Animation */}
       <h2 className="title">User List</h2>
-
-      {/* Search Bar */}
       <input
         type="text"
         placeholder="Search users..."
@@ -81,7 +80,6 @@ const Users = () => {
         value={searchQuery}
         onChange={handleSearch}
       />
-
       <div className="main-content">
         <div className="users-list">
           {filteredUsers.length > 0 ? (
@@ -112,7 +110,6 @@ const Users = () => {
                   </button>
                 </div>
 
-                {/* Edit form appears below the user card */}
                 {editingUser && editingUser.id === user.id && (
                   <div className="edit-form">
                     <h3>Edit User</h3>
@@ -165,7 +162,6 @@ const Users = () => {
             <p className="no-users">No users found.</p>
           )}
 
-          {/* Pagination */}
           <div className="pagination">
             <button
               disabled={page === 1}

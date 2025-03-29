@@ -1,16 +1,29 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* General Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: rgba(61, 13, 13, 0.15); /* Soft transparent white */
+  backdrop-filter: blur(10px); /* Smooth blur effect */
   color: white;
   padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .logo h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* Navigation Links */
@@ -28,11 +41,13 @@
   text-decoration: none;
   color: white;
   font-size: 18px;
-  transition: color 0.3s;
+  font-weight: 400;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .nav-links a:hover {
   color: #f4a261;
+  transform: scale(1.1);
 }
 
 /* Hide Menu Icon on Larger Screens */
@@ -54,7 +69,8 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #222;
+    background-color: rgba(255, 255, 255, 0.2); /* Soft transparent white */
+    backdrop-filter: blur(10px);
     text-align: center;
     padding: 20px 0;
   }

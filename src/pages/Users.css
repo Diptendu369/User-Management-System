@@ -4,6 +4,8 @@
   margin: auto;
   padding: 20px;
   position: relative;
+  background: none;
+  backdrop-filter: blur(10px);
 }
 
 /* Title */
@@ -231,6 +233,25 @@
   display: block;
 }
 
+.no-users {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+}
+
+/* No Users Message */
 .no-users {
   text-align: center;
   font-size: 18px;
