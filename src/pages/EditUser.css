@@ -1,0 +1,116 @@
+/* .edit-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.edit-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+}
+
+@media screen and (max-width: 480px) {
+  .edit-container {
+    width: 95%;
+  }
+
+  .edit-buttons {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    margin: 5px 0;
+    width: 100%;
+  }
+} */
+.edit-user-container {
+  text-align: center;
+  margin: 20px auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkblue;
+}
+
+.edit-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}

@@ -1,0 +1,239 @@
+/* General Container */
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Users List */
+.users-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* User Card Styling */
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 95%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  position: relative;
+}
+
+.user-card:hover {
+  background: #ececec;
+  transform: scale(1.02);
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.user-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+}
+
+.user-details {
+  flex-grow: 1;
+}
+
+/* Action Buttons */
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: #b92c3c;
+}
+
+/* Edit Form Sidebar */
+.edit-container {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 350px;
+  height: 100vh;
+  background: white;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: left 0.5s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Show the sidebar when active */
+.edit-container.active {
+  left: 0;
+}
+
+/* Edit Form Styling */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form input, .edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #1e7e34;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #545b62;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-container {
+    width: 100%;
+    left: -100%;
+  }
+
+  .edit-container.active {
+    left: 0;
+  }
+}
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+}
+
+.no-users {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
