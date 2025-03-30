@@ -6,7 +6,7 @@ This is a React application that integrates with the Reqres API to perform basic
 
 ## Hosted Link
 
-🔗 [Live Demo](https://cosmic-starburst-862e48.netlify.app)
+🔗 [Live Demo](https://ornate-sunshine-7a33c0.netlify.app/)
 
 ## Features
 
