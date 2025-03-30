@@ -15,6 +15,7 @@ const Users = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  
 
   useEffect(() => {
     axios.get(`https://reqres.in/api/users?page=${page}`).then((res) => {

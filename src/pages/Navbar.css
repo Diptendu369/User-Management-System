@@ -6,8 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(61, 13, 13, 0.15); /* Soft transparent white */
-  backdrop-filter: blur(10px); /* Smooth blur effect */
+  background-color: rgba(159, 62, 166, 0.6); /* Darker background for better contrast */
+  backdrop-filter: blur(10px);
   color: white;
   padding: 15px 20px;
   position: sticky;
@@ -19,6 +19,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Logo */
 .logo h2 {
   margin: 0;
   font-size: 26px;
@@ -50,7 +51,7 @@
   transform: scale(1.1);
 }
 
-/* Hide Menu Icon on Larger Screens */
+/* Mobile Menu Icon */
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -69,10 +70,12 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2); /* Soft transparent white */
+    background-color: rgba(60, 10, 56, 0.8); /* Darker transparent background */
     backdrop-filter: blur(10px);
     text-align: center;
     padding: 20px 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .nav-links.open {
@@ -81,5 +84,65 @@
 
   .nav-links li {
     padding: 15px;
+  }
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  background: rgba(20, 20, 20, 0.95); /* Darker background */
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 180px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+/* Show dropdown */
+.dropdown-container.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  list-style: none;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown button styles */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    text-align: center;
   }
 }

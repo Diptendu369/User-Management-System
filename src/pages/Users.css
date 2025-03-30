@@ -4,7 +4,7 @@
   margin: auto;
   padding: 20px;
   position: relative;
-  background: none;
+  background:scroll;
   backdrop-filter: blur(10px);
 }
 
@@ -70,7 +70,8 @@
   gap: 10px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -125,7 +126,8 @@
   gap: 15px;
 }
 
-.edit-form input, .edit-form textarea {
+.edit-form input,
+.edit-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -258,3 +260,5 @@
   color: #888;
   margin-top: 20px;
 }
+
+
