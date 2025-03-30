@@ -91,7 +91,7 @@ const Login = () => {
           }}
         >
           <img
-            src="https://fastly.picsum.photos/id/318/200/200.jpg?hmac=bXfpcSpOySqXMIev1AISKO15vvxPgau4JEA36kuhG1Y"
+            src="https://picsum.photos/200"
             alt="Welcome"
             style={styles.image}
           />
